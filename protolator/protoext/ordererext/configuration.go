@@ -84,6 +84,8 @@ func (ct *ConsensusType) VariablyOpaqueFieldProto(name string) (proto.Message, e
 		return &etcdraft.ConfigMetadata{}, nil
 	case "BFT":
 		return &smartbft.Options{}, nil
+	case "MYBFT":
+		return &smartbft.Options{}, nil
 	default:
 		return &empty.Empty{}, nil
 	}
